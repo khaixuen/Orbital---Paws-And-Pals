@@ -32,6 +32,33 @@ public class LoginManager : MonoBehaviour
         //Begin Checking
         Debug.Log("USERNAME: " + username);
         Debug.Log("USERNAME: " + password);
+
+        string loginCheckMessage = CheckLoginInfo(username, password);
+    }
+
+    private string CheckLoginInfo(string username, string password)
+    {
+        string returnString = "";
+
+        if(string.IsNullOrEmpty(username) && string.IsNullOrEmpty(password))
+        {
+            returnString = "Both username and password are empty";
+        }
+        else if (string.IsNullOrEmpty(username))
+        {
+            returnString = "Username is empty";
+        }
+        else if (string.IsNullOrEmpty(password)) 
+        {
+            returnString = "Password is empty";
+        }
+        else 
+        {
+            returnString = "";
+        }
+
+        Debug.Log("RETURN STRING: " + returnString);
+        return returnString;
     }
 
 
