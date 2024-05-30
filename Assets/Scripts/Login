@@ -1,0 +1,39 @@
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+
+public class LoginManager : MonoBehaviour
+{
+    [SerializeField]
+    private TMP_InputField usernameField;
+    [SerializeField]
+    private TMP_InputField passwordField;
+
+    [HideInInspector]
+    public int count = 2;
+ 
+
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
+
+    }
+
+    public void OnSubmitLogin()
+    {
+        string username = usernameField.text;
+        string password = passwordField.text;
+
+        //Begin Checking
+        Debug.Log("USERNAME: " + username);
+        Debug.Log("USERNAME: " + password);
+    }
+
+
+ 
+}
