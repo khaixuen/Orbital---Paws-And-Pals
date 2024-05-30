@@ -34,6 +34,16 @@ public class LoginManager : MonoBehaviour
         Debug.Log("USERNAME: " + password);
 
         string loginCheckMessage = CheckLoginInfo(username, password);
+
+        if (string.IsNullOrEmpty(loginCheckMessage))
+        {
+            //login
+            Debug.Log("LOGIN");
+        }
+        else
+        {
+            Debug.LogError("ERROR: " + loginCheckMessage);
+        }
     }
 
     private string CheckLoginInfo(string username, string password)
